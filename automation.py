@@ -32,16 +32,14 @@ def pay_calculator():
         header = ['Date Started', 'Time Started', 'Date Ended', 'Time Ended', 'Amount Earned']      #a header is created for the csv
         data = [date_started, ts, date_ended, te, f'US${money_earned}']                             #The data generated from the interaction with the user is collected
 
-        with open('timetracker.csv', 'w', newline='', encoding='UTF8') as f:  #writing a csv file using the writer 
-            writer = csv.writer(f)
+        with open('timetracker.csv', 'w', newline='', encoding='UTF8') as file:  #writing a csv file using the writer 
+            writer = csv.writer(file)
 
             # write the header
             writer.writerow(header)
 
             # write the data
             writer.writerow(data)
-
-            f.close()
 
     else:
         print("hours cannot be less than zero")
