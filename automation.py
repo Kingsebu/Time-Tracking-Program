@@ -24,8 +24,8 @@ def pay_calculator():
     time_diff = b - a                       #obtaining the differencec in the timein minutes
     hourly_pay = 5                          #hourly wage is US$5
     if ans > 0:                             #setting an if condition that works for only when time is greater than 0.
-        val = time_diff / 60                #the difference of time in minutes is converted to hours in float type
-        money_earned = val * hourly_pay     #the wages recieved for period worked is calculated here 
+        hours_worked = time_diff / 60                #the difference of time in minutes is converted to hours in float type
+        money_earned = hours_worked * hourly_pay     #the wages recieved for period worked is calculated here 
 
         print("the hourly money earned: US$", money_earned)    #result or total wages earned for the period worked is printed. 
 
